@@ -47,3 +47,7 @@ If you want to learn more about building native executables, please consult http
 - jaxrs - reativo
 - jaxrs - reativo com rota reativa
 - gRPC
+
+
+rm -rf jmeter-report jmeter-output report-output jmeter*log
+~/desenvolvimento/apache-jmeter-5.3/bin/jmeter -n -t select.jmx -p jmeter.properties -l jmeter2333.log -e
