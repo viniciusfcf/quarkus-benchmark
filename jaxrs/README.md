@@ -49,5 +49,5 @@ If you want to learn more about building native executables, please consult http
 - gRPC
 
 
-rm -rf jmeter-report jmeter-output report-output jmeter*log
-~/desenvolvimento/apache-jmeter-5.3/bin/jmeter -n -t select.jmx -p jmeter.properties -l jmeter2333.log -e
+rm -rf report-jaxrs jmeter*log
+~/desenvolvimento/apache-jmeter-5.3/bin/jmeter -n -t select.jmx -p jmeter.properties -l jmeter-jaxrs.log -e -o report-jaxrs
