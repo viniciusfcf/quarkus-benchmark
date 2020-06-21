@@ -48,6 +48,8 @@ If you want to learn more about building native executables, please consult http
 - jaxrs - reativo com rota reativa
 - gRPC
 
+- Criando um banco pre carregado 
+https://medium.com/opensanca/criando-uma-imagem-docker-com-o-banco-de-dados-pr%C3%A9-carregado-5b97b7802007
 
 rm -rf report-jaxrs jmeter*log
 ~/desenvolvimento/apache-jmeter-5.3/bin/jmeter -n -t select.jmx -p jmeter.properties -l jmeter-jaxrs.log -e -o report-jaxrs

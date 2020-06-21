@@ -1,57 +1,37 @@
 package com.github.viniciusfcf.quarkus;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
-public class User {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    private String name;
+import org.hibernate.annotations.CreationTimestamp;
 
-    private Integer age;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
-    private BigDecimal salary;
+@Entity
+@Table(name = "user", schema = "public")
+public class User extends PanacheEntityBase {
 
-    private Long xpto;
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
-    private Boolean verified;
+    public String firstname;
 
-	public String getName() {
-		return name;
-	}
+    public Integer age;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public BigDecimal salary;
 
-	public Integer getAge() {
-		return age;
-	}
+    public Long points;
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	public BigDecimal getSalary() {
-		return salary;
-	}
-
-	public void setSalary(BigDecimal salary) {
-		this.salary = salary;
-	}
-
-	public Long getXpto() {
-		return xpto;
-	}
-
-	public void setXpto(Long xpto) {
-		this.xpto = xpto;
-	}
-
-	public Boolean getVerified() {
-		return verified;
-	}
-
-	public void setVerified(Boolean verified) {
-		this.verified = verified;
-	}
+	public Boolean verified;
+	
+	@CreationTimestamp
+	public LocalDateTime creation;
 
 }
