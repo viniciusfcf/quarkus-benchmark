@@ -1,0 +1,10 @@
+2020-06-21 02:17:01,166 ERROR o.a.j.JMeter: An error occurred: 
+java.lang.RuntimeException: Could not read JMeter properties file:jmeter.properties
+	at org.apache.jmeter.util.JMeterUtils.loadJMeterProperties(JMeterUtils.java:202) ~[ApacheJMeter_core.jar:5.3]
+	at org.apache.jmeter.JMeter.initializeProperties(JMeter.java:790) ~[ApacheJMeter_core.jar:5.3]
+	at org.apache.jmeter.JMeter.start(JMeter.java:463) [ApacheJMeter_core.jar:5.3]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:252) [ApacheJMeter.jar:5.3]

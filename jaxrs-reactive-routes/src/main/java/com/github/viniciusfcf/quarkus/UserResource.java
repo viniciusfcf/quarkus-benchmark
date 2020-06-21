@@ -6,6 +6,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+import io.quarkus.panache.common.Sort;
 import io.quarkus.vertx.web.Route;
 import io.quarkus.vertx.web.RouteBase;
 import io.vertx.core.http.HttpMethod;
@@ -38,7 +39,7 @@ public class UserResource {
         int usersCount = 100_000;
         int maxPage = usersCount / pageSize;
         int pageIndex = RANDOM.nextInt(maxPage);
-        String encode = Json.encode(User.findAll().page(pageIndex, pageSize).list());
+        String encode = Json.encode(User.findAll(Sort.ascending("firstname")).page(pageIndex, pageSize).list());
 		rc.response().end(encode);
     }
 

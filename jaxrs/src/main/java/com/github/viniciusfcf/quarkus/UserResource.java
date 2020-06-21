@@ -1,6 +1,5 @@
 package com.github.viniciusfcf.quarkus;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -13,6 +12,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import io.quarkus.panache.common.Sort;
 
 @Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
@@ -43,7 +44,7 @@ public class UserResource {
         int usersCount = 100_000;
         int maxPage = usersCount / pageSize;
         int pageIndex = RANDOM.nextInt(maxPage);
-		return User.findAll().page(pageIndex, pageSize).list();
+		return User.findAll(Sort.ascending("firstname")).page(pageIndex, pageSize).list();
     }
 
     @POST
