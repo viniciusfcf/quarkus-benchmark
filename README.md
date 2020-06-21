@@ -32,5 +32,5 @@ java -jar target/<PROJECT_NAME>-1.0-SNAPSHOT-runner.jar
 rm -rf report-jaxrs /tmp/jmeter*log
 jmeter -n -t select.jmx -p jmeter.properties -l /tmp/jmeter-<PROJECT_NAME>.log -e -o report-<PROJECT_NAME>
 ```
-Open `report-<PROJECT_NAME>/index.html` fie
+Open `report-<PROJECT_NAME>/index.html` file
  
