@@ -17,7 +17,7 @@ docker run -p 5432:5432 viniciusfcf/postgres:latest
 You can run your application in dev mode that enables live coding using:
 ```
 cd <PROJECT_NAME> (ex:jaxrs)
-./mvnw clean package -DskipTests
+./mvnw clean package
 java -jar target/<PROJECT_NAME>-1.0-SNAPSHOT-runner.jar
 ```
 
